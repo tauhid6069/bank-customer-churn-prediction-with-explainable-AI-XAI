@@ -1,8 +1,5 @@
-# Project in progress...
-Stay Tuned...
 
-
-**# bank-customer-churn-prediction**# 🏦 
+**# bank-customer-churn-prediction with Explainable AI (xAI)**# 🏦 
 
 ## 📌 Problem Statement
 Customer churn is a major challenge in the banking sector and losing valuable customers directly impacts revenue and growth.  
