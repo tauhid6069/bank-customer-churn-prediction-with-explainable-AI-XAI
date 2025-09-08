@@ -1,6 +1,3 @@
-
-**# bank-customer-churn-prediction with Explainable AI (xAI)**# 🏦 
-
 ## 📌 Problem Statement
 Customer churn is a major challenge in the banking sector and losing valuable customers directly impacts revenue and growth.  
 The goal of this project is to **predict which customers are likely to churn** (leave the bank) so retention teams can take proactive actions.  
@@ -26,14 +23,11 @@ We focus not only on model accuracy, but also on **recall (catching churners)** 
 - **Balance:** Surprisingly, customers with both very low and very high balances show higher churn.  
 - **Age:** Older customers (>50) are more likely to churn.
 
-<img width="580" height="433" alt="image" src="https://github.com/user-attachments/assets/1c8911b1-d7e2-40a2-938e-1703134f3f37" />
-<img width="567" height="433" alt="image" src="https://github.com/user-attachments/assets/12c980cb-a71c-4f12-848f-16e8c76d9c50" />
-<img width="563" height="433" alt="image" src="https://github.com/user-attachments/assets/fa6ca3f9-97ee-4358-9861-27232c9d1303" />
-<img width="598" height="433" alt="image" src="https://github.com/user-attachments/assets/6d8c763e-b646-4d16-a2de-76630e03f6fc" />
-
-
-
-
+<img width="580" height="433" alt="image" src="https://github.com/user-attachments/assets/42d84d59-9980-434c-8411-6cfd3d157229" />
+<img width="563" height="433" alt="image" src="https://github.com/user-attachments/assets/08fd0aa4-3d95-4a3d-8072-cd409ca53c65" />
+<img width="567" height="433" alt="image" src="https://github.com/user-attachments/assets/fde5a0fb-dc86-44bb-9e06-c768de8f4e6b" />
+<img width="598" height="433" alt="image" src="https://github.com/user-attachments/assets/c91202e3-3df3-40fe-bc22-0a741250ecdf" />
+<img width="563" height="433" alt="image" src="https://github.com/user-attachments/assets/cfd2cf3f-6de8-48dc-88a4-1ec5df3dddf1" />
 
 ---
 
@@ -60,29 +54,22 @@ After tuning threshold = **0.165**:
 - Recall (churn) = 0.80 → *we now catch 80% of churners*.  
 - Precision (churn) = 0.45 → more false positives, but far fewer missed churners.  
 
-<img width="567" height="453" alt="image" src="https://github.com/user-attachments/assets/8ab36b34-4a00-4c7e-be80-b6788125afb7" />
-
+<img width="567" height="453" alt="image" src="https://github.com/user-attachments/assets/8c02a41b-c414-4eae-87fa-d6f4729ede88" />
 
 ---
 
 ## 🧠 Explainable AI (SHAP)
 
 **Global Insights (SHAP summary):**
-- Short tenure, being inactive, and living in Spain are the strongest churn drivers.
-- Customers with credit cards are more likely to churn.
-- Customers with multiple products are more likely to churn.
-- 
-<img width="438" height="680" alt="image" src="https://github.com/user-attachments/assets/159b70e5-5260-4950-9229-5211dc1c1443" />
+- The plot shows that high values for Age (red dots) generally have a positive SHAP value, indicating that older customers are more likely to churn.
+- A high number of products (red dots) has a strong positive impact, suggesting that having many products increases a customer's likelihood of churning.
+- Higher balances being a strong indicator of a higher churn risk.
 
-**Local Explanation (example customer):**
-- Predicted churn probability = 0.78  
-- Top churn factors:
-  - Short tenure (+0.25 risk)  
-  - Not an active member (+0.15 risk)  
-  - Geography = France (+0.10 risk)  
+<img width="770" height="659" alt="image" src="https://github.com/user-attachments/assets/f333d9dd-805e-4599-a836-08f1ba887b07" />
 
-<img width="841" height="593" alt="image" src="https://github.com/user-attachments/assets/26fa1429-cf10-4c71-a766-dd514c1448b1" />
-
+**Local Explanation (What factors are contributing to a particular customer to churn):**
+The following SHAP waterfall plot is displaying (idx = 1) the factors affecting to churn - for 1st custoomer (idx = 1)
+<img width="841" height="593" alt="image" src="https://github.com/user-attachments/assets/1f3cba92-4cb5-41cf-827e-901fca557c9f" />
 
 ---
 
@@ -97,7 +84,7 @@ After tuning threshold = **0.165**:
 
 ## 🛠 Tech Stack
 - Python, Pandas, NumPy, Matplotlib  
-- scikit-learn, XGBoost, imbalanced-learn  
+- scikit-learn, XGBoost
 - SHAP (explainable AI)  
 
 ---
